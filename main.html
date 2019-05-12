@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+     rel="stylesheet">
+    <style>
+    
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Raleway', sans-serif;
+        background: url("images/bg9.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        height: 15%;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background: rgba(0,0,0,0.8);
+      }
+
+
+      
+
+      .header  a {
+        padding: 20px 20px;
+        color: #fff;
+        font-size: 1.3rem;
+        text-decoration: none;
+        transition: 0.5s linear;
+        font-family: 'Raleway', sans-serif;
+
+      }
+
+      .header  a:hover {
+        color: #2980b9;
+      }
+
+      .main_container {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        /*background: url("images/bg9.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;*/
+      } 
+
+      .main_container .side_nav {
+          height: 100%;
+          width: 30%;
+          box-sizing: border-box;
+          background: rgba(0,0,0,0.6);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .main_container .side_nav .navigation_drawer {
+        height: 100%;
+        width: 100%;
+        /*border: 1px solid red;*/
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+      }
+
+      .main_container .side_nav .navigation_drawer .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main_container .side_nav .navigation_drawer .title h2 {
+        font-size: 1.2rem;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul {
+        list-style-type:square;
+        box-sizing: border-box;
+      }
+
+      ul li {
+        padding: 10px 10px;
+        color: #fff;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1rem;
+        transition: 0.5s ease-in-out;
+      }
+
+      .sun:hover{
+        color: rgba(251, 197, 49,1.0);
+      }
+
+      .mer:hover {
+        color: rgba(113, 128, 147,1.0);
+      }
+
+      .venu:hover {
+        color: rgba(255, 177, 66,1.0);
+      }
+
+      .earth:hover {
+        color: rgba(9, 132, 227,1.0);
+      }
+
+      .mars:hover {
+        color: rgba(194, 54, 22,0.8);
+      }
+
+      .jup:hover {
+        color: rgba(254, 202, 120,1.0);
+      }
+
+      .sat:hover {
+        color: rgba(246, 229, 141,1.0);
+      }
+
+      .uran:hover {
+        color: rgba(126, 214, 223,1.0);
+      }
+
+      .nep:hover {
+        color: rgba(9, 132, 227,1.0);
+      }
+
+      .pluto:hover {
+          color: rgba(225, 112, 85,1.0);
+      }
+
+      .main_container .main_content {
+        width: 70%;
+        box-sizing: border-box;
+        background: url("images/nasa-53884-unsplash.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+
+      .main_container .main_content .display_info {
+        height: 80%;
+        width: 80%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.5);
+        padding: 20px 20px;
+        border-radius: 5px;
+        transition: 0.5s linear;
+      }
+
+      .display_info h3 {
+        font-size: 2rem;
+      }
+
+      .display_info p {
+        line-height: 40px;
+        font-size: 1.7rem;
+      }
+
+      .main_container .main_content .display_info:hover {
+        background: rgba(0,0,0,0.8);
+        cursor: pointer;
+      }
+
+      .icon {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            text-align: right;
+            box-sizing: border-box;
+            font-size: 35px;
+            color: #FFF;
+            display: none;
+        }
+
+       
+
+      /* ------- Media queries ------ */
+
+      @media  screen  and (max-width:720px) {
+
+        .header  {
+          width: 100%;
+          justify-content: center;
+        }
+        .header  a {
+          padding: 15px 15px;
+          font-size: 1.2rem;
+        }
+
+        .main_container .side_nav .navigation_drawer .title h2 {
+          font-size: 1.0rem;
+        }
+
+        .display_info h3 {
+        font-size: 1.7rem;
+      }
+
+      .display_info p {
+        line-height: 40px;
+        font-size: 1.5rem;
+      }
+        
+      }
+
+      @media  screen  and (max-width:480px) {
+
+
+        .display_info h3 {
+        font-size: 1.4rem;
+      }
+
+      .display_info p {
+        line-height: 40px;
+        font-size: 1.2rem;
+      }
+
+        
+
+        ul li a {
+          font-size: 1rem;
+        }
+
+        .header  {
+                width: 100%;
+                text-align: center;
+                background: linear-gradient(120deg , rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+                display: none;
+                height: 250px;
+                z-index: 2;
+                
+                
+            }
+            .header  a  {
+            
+                display: block;
+                width: 100%;
+                margin-top: 0;
+                font-size: 1rem;
+            }
+            .header  a:hover {
+                background-color: rgba(39, 174, 96,0.7);
+                color: #FFF;
+            }
+            .icon {
+              display: block;
+              background: rgba(0,0,0,0.8);
+            }
+
+            .main_container  {
+
+              display: flex;
+              flex-direction: column-reverse;
+             
+            }
+
+            .main_container .main_content {
+              width: 100%;
+              height: 60%;
+
+            }
+
+            .main_container .side_nav {
+              width: 100%;
+              height: 40%;
+            }
+
+            .main_container .side_nav .navigation_drawer .title h2 {
+              display: block;
+            }
+
+            ul {
+              list-style-type: none;
+            }
+
+            ul li {
+              display: inline-block;
+            }
+
+            
+        }
+        
+
+      
+
+      .active {
+            display: block;
+        }
+
+    
+    
+    
+    
+    </style>
+  </head>
+    <body>
+      
+        <div class="icon">
+            <div class="menu">
+                 <i class="fa fa-bars" aria-hidden="true"></i>
+             </div>
+         </div>
+
+      <div class="header">
+        
+          <a href="#">Main</a>
+          <a href="#">About</a>
+          <a href="#">Store</a>
+          <a href="#">Community</a>
+          <a href="#">Contact</a>
+        
+      </div>
+      <div class="main_container">
+        <div class="side_nav">
+          <div class="navigation_drawer">
+            <div class="title">
+            <h2>Jump off right where you want to go</h2>
+          </div>
+            <ul>
+              <li><a href="#" class="sun">The Sun</a></li>
+              <li><a href="#" class="mer">Mercury</a></li>
+              <li><a href="#" class="venu">Venus</a></li>
+              <li><a href="#" class="earth">Earth</a></li>
+              <li><a href="#" class="mars">Mars</a></li>
+              <li><a href="#" class="jup">Jupiter</a></li>
+              <li><a href="#" class="sat">Saturn</a></li>
+              <li><a href="#" class="uran">Uranus</a></li>
+              <li><a href="#" class="nep">Neptune</a></li>
+              <li><a href="#" class="pluto">Pluto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_content">
+          <div class="display_info">
+            <h3>What is a Solar System ?</h3>
+            <p>a Solar System is the collection of eight planets and their moons in orbit round the sun, together with
+               smaller bodies in the form of asteroids, meteoroids, and comets.</p>
+          </div>
+        </div>
+        </div>  
+
+
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script type="text/javascript">
+      
+         $(document).ready(function() {
+            $('.menu').click(function(){
+               $('.header').toggleClass('active');
+            });
+         });
+         
+      </script>
+
+
+
+    </body>
+
+</html>
