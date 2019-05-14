@@ -182,9 +182,19 @@
 
            /*------ media queries ----- */
 
-           @media screen and (max-width:675px) {
+           @media only screen and (max-width:675px) {
                .welcome_section .first {
                    font-size: 3rem;
+               }
+           }
+
+           @media only screen and (max-width: 580px) {
+               .welcome_section .first {
+                   font-size: 2.5rem;
+               }
+
+               .intro {
+                   font-size: 1.5rem;
                }
            }
 
