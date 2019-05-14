@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SpaceGuide | planets</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <style>
+        
+           body {
+               margin: 0;
+               padding: 0;
+               display: flex;
+               flex-direction: column;
+               font-family: 'Raleway', sans-serif;
+               overflow-x: hidden;
+               background: linear-gradient(120deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,
+                           url("images/nasa-53884-unsplash.jpg") no-repeat;
+               background-size: cover;
+               background-position: center;
+               background-attachment: fixed;           
+           }
+
+           .sun_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               box-sizing: border-box;
+           }
+
+           .sun_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .sun_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .sun_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .sun_container .img_container .img:nth-child(1) {
+               background: url("images/sun2.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .sun_container .img_container .img:nth-child(2) {
+               background: url("images/sun4.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .sun_container .img_container .img:nth-child(3) {
+               background: url("images/sun5.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .sun_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+               
+           }
+
+           .sun_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+
+
+           .mer_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .mer_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .mer_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .mer_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .mer_container .img_container .img:nth-child(1) {
+               background: url("images/mer1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .mer_container .img_container .img:nth-child(2) {
+               background: url("images/mer2.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .mer_container .img_container .img:nth-child(3) {
+               background: url("images/mercury2.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .mer_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .mer_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+
+           .ven_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .ven_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .ven_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .ven_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .ven_container .img_container .img:nth-child(1) {
+               background: url("images/venus1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .ven_container .img_container .img:nth-child(2) {
+               background: url("images/venus2.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .ven_container .img_container .img:nth-child(3) {
+               background: url("images/PIA00102.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .ven_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .ven_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+
+           .earth_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .earth_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .earth_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .earth_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .earth_container .img_container .img:nth-child(1) {
+               background: url("images/earth1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .earth_container .img_container .img:nth-child(2) {
+               background: url("images/earth2.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .earth_container .img_container .img:nth-child(3) {
+               background: url("images/earth3.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .earth_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .earth_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+
+           .mars_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .mars_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .mars_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .mars_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .mars_container .img_container .img:nth-child(1) {
+               background: url("images/mars_photo1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .mars_container .img_container .img:nth-child(2) {
+               background: url("images/mars_photo3.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .mars_container .img_container .img:nth-child(3) {
+               background: url("images/mars_photo5.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .mars_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .mars_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+
+           .jupiter_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .jupiter_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .jupiter_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .jupiter_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .jupiter_container .img_container .img:nth-child(1) {
+               background: url("images/jup1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .jupiter_container .img_container .img:nth-child(2) {
+               background: url("images/jup5.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .jupiter_container .img_container .img:nth-child(3) {
+               background: url("images/jup6.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .jupiter_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .jupiter_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+
+           .saturn_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .saturn_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .saturn_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .saturn_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .saturn_container .img_container .img:nth-child(1) {
+               background: url("images/satu1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .saturn_container .img_container .img:nth-child(2) {
+               background: url("images/satu3.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .saturn_container .img_container .img:nth-child(3) {
+               background: url("images/-saturn-b.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .saturn_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .saturn_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+           .uranus_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .uranus_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .uranus_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .uranus_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .uranus_container .img_container .img:nth-child(1) {
+               background: url("images/ura1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .uranus_container .img_container .img:nth-child(2) {
+               background: url("images/ura2.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .uranus_container .img_container .img:nth-child(3) {
+               background: url("images/ura3.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .uranus_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .uranus_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+           .nep_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .nep_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .nep_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .nep_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .nep_container .img_container .img:nth-child(1) {
+               background: url("images/nep1.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .nep_container .img_container .img:nth-child(2) {
+               background: url("images/nep2.jpeg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .nep_container .img_container .img:nth-child(3) {
+               background: url("images/nep3.jpeg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .nep_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .nep_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+           .nep_container .description1 a {
+               color: rgba(238, 184, 6, 0.911);
+               text-decoration: none;
+               transition: 0.5s linear;
+           }
+
+           .nep_container .description1 a:hover {
+               color: rgba(0, 128, 0, 0.897);
+           }
+
+
+
+           .pluto_container {
+               width: 100%;
+               height: 130vh;
+               display: flex;
+               flex-direction: column;
+               /*border: 1px solid red;*/
+               box-sizing: border-box;
+           }
+
+           .pluto_container .title {
+               align-self: flex-start;
+               /*border: 1px solid blue;*/
+               height: 10%;
+               box-sizing: border-box;
+               padding: 10px 10px;
+               color: #fff;
+           }
+
+           .pluto_container .img_container {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-around;
+               height: 50%;
+               /*border: 1px solid yellow;*/
+           }
+
+           .pluto_container .img_container .img {
+               height: 100%;
+               width: 30%;
+               /*border: 1px solid green;*/
+               border-radius: 15px;
+           }
+
+           .pluto_container .img_container .img:nth-child(1) {
+               background: url("images/pluto1.jpeg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .pluto_container .img_container .img:nth-child(2) {
+               background: url("images/pluto2.jpeg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .pluto_container .img_container .img:nth-child(3) {
+               background: url("images/pluto3.jpg") no-repeat;
+               background-position: center;
+               background-size: cover;
+           }
+
+           .pluto_container .description1 {
+               width: 60%;
+               height: 40%;
+               box-sizing: border-box;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               align-self: center;
+               font-family: inherit;
+               /*border: 1px solid grey;*/
+               font-size: 1.5rem;
+               color: #fff;
+           }
+
+           .pluto_container .description1 p {
+               width: 80%;
+               height: 80%;
+               line-height: 35px;
+           }
+
+           /* ------ media queries --------*/
+           @media screen and (max-width:970px) {
+               .sun_container .img_container .img:nth-child(2) {
+                   width: 0;
+                   display: none;
+               }
+
+               .sun_container .img_container .img:nth-child(1) {
+                   width: 45%;
+               }
+
+               .sun_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .mer_container .img_container {
+                   justify-content: space-around;
+               }
+
+               .mer_container .img_container .img:nth-child(1) {
+                   width: 0;
+                   display: none;
+               }
+
+               .mer_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .mer_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .mer_container .img_container {
+                   justify-content: space-around;
+               }
+
+               .ven_container .img_container .img:nth-child(1) {
+                   width: 0;
+                   display: none;
+               }
+
+               .ven_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .ven_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .earth_container .img_container .img:nth-child(3) {
+                   width: 0;
+                   display: none;
+               }
+
+               .earth_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .earth_container .img_container .img:nth-child(1) {
+                   width: 45%;
+               }
+
+               .mars_container .img_container .img:nth-child(1) {
+                   width: 0;
+                   display: none;
+               }
+
+               .mars_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .mars_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .jupiter_container .img_container .img:nth-child(1) {
+                   width: 0;
+                   display: none;
+               }
+
+               .jupiter_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .jupiter_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .saturn_container .img_container .img:nth-child(3) {
+                   width: 0;
+                   display: none;
+               }
+
+               .saturn_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .saturn_container .img_container .img:nth-child(1) {
+                   width: 45%;
+               }
+
+               .uranus_container .img_container .img:nth-child(2) {
+                   width: 0;
+                   display: none;
+               }
+
+               .uranus_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .uranus_container .img_container .img:nth-child(1) {
+                   width: 45%;
+               }
+
+               .nep_container .img_container .img:nth-child(3) {
+                   width: 0;
+                   display: none;
+               }
+
+               .nep_container .img_container .img:nth-child(2) {
+                   width: 45%;
+               }
+
+               .nep_container .img_container .img:nth-child(1) {
+                   width: 45%;
+               }
+
+               .pluto_container .img_container .img:nth-child(2) {
+                   width: 0;
+                   display: none;
+               }
+
+               .pluto_container .img_container .img:nth-child(3) {
+                   width: 45%;
+               }
+
+               .pluto_container .img_container .img:nth-child(1) {
+                   width: 45%;
+               }
+           }
+
+           @media screen and (max-width:750px) {
+               .sun_container .img_container .img:nth-child(3) {
+                   display: none;
+                   width: 0;
+               }
+
+               .sun_container .img_container .img:nth-child(1) {
+                   width: 80%;
+               }
+
+               .sun_container .description1 {
+                   width: 95%;
+               }
+
+               .mer_container .img_container .img:nth-child(2) {
+                   display: none;
+                   width: 0;
+               }
+
+               .mer_container .img_container .img:nth-child(3) {
+                   width: 80%;
+               }
+
+               .mer_container .description1 {
+                   width: 95%;
+               }
+
+               .ven_container .img_container .img:nth-child(3) {
+                   display: none;
+                   width: 0;
+               }
+
+               .ven_container .img_container .img:nth-child(2) {
+                   width: 80%;
+               }
+
+               .ven_container .description1 {
+                   width: 95%;
+               }
+
+               .earth_container .img_container .img:nth-child(2) {
+                   display: none;
+                   width: 0;
+               }
+
+               .earth_container .img_container .img:nth-child(1) {
+                   width: 80%;
+               }
+
+               .earth_container .description1 {
+                   width: 95%;
+               }
+
+               .mars_container .img_container .img:nth-child(2) {
+                   display: none;
+                   width: 0;
+               }
+
+               .mars_container .img_container .img:nth-child(3) {
+                   width: 80%;
+               }
+
+               .mars_container .description1 {
+                   width: 95%;
+               }
+
+               .jupiter_container .img_container .img:nth-child(2) {
+                   display: none;
+                   width: 0;
+               }
+
+               .jupiter_container .img_container .img:nth-child(3) {
+                   width: 80%;
+               }
+
+               .jupiter_container .description1 {
+                   width: 95%;
+               }
+
+               .saturn_container .img_container .img:nth-child(1) {
+                   display: none;
+                   width: 0;
+               }
+
+               .saturn_container .img_container .img:nth-child(2) {
+                   width: 80%;
+               }
+
+               .saturn_container .description1 {
+                   width: 95%;
+               }
+
+               .uranus_container .img_container .img:nth-child(3) {
+                   display: none;
+                   width: 0;
+               }
+
+               .uranus_container .img_container .img:nth-child(1) {
+                   width: 80%;
+               }
+
+               .uranus_container .description1 {
+                   width: 95%;
+               }
+
+               .nep_container .img_container .img:nth-child(1) {
+                   display: none;
+                   width: 0;
+               }
+
+               .nep_container .img_container .img:nth-child(2) {
+                   width: 80%;
+               }
+               .nep_container .description1 {
+                   width: 90%;
+               }
+
+               .pluto_container .img_container .img:nth-child(1) {
+                   display: none;
+                   width: 0;
+               }
+
+               .pluto_container .img_container .img:nth-child(3) {
+                   width: 80%;
+               }
+
+               .pluto_container .description1 {
+                   width: 95%;
+               }
+           }
+        
+        
+        
+        
+        
+        
+        </style>
+    </head>
+
+    <body>
+
+        <div class="sun_container" id="sun">
+            <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                <h2>1. The Sun</h2>
+            </div>
+            <div class="img_container">
+                    <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                    <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                    <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+            </div>
+            <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+              <p>The Sun (or Sol), is the star at the centre of our solar system and is responsible for the Earth’s climate and weather.
+                    , its so heavy , its gravity controles the entire solar system.</p>
+            </div>
+        </div>
+
+        <div class="mer_container" id="mer">
+            <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                <h2>2. Mercury</h2>
+            </div>
+            <div class="img_container">
+                <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+            </div>
+            <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+              <p>Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. 
+                </p>
+            </div>
+        </div>
+
+
+        <div class="ven_container" id="ven">
+            <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                <h2>3. Venus</h2>
+            </div>
+            <div class="img_container">
+                <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+            </div>
+            <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+              <p>Venus is the brightest planet in the Solar System and can be 
+                  seen even in daylight if you know where to look.  
+                  it is called the morning star and the evening star.</p>
+            </div>
+        </div>
+
+        <div class="earth_container" id="earth">
+            <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                <h2>4. Earth</h2>
+            </div>
+            <div class="img_container">
+                <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+            </div>
+            <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+              <p>Well this planet dont need any description actually , its our lovely , beautiful
+                  and unique home to mankind and all the living beings
+                  , so we have to take care of it before its too late :(
+              </p>
+            </div>
+        </div>
+
+        <div class="mars_container" id="mars">
+                <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                    <h2>5. Mars</h2>
+                </div>
+                <div class="img_container">
+                    <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                    <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                    <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+                </div>
+                <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+                  <p>Mars is the fourth planet from the Sun and is the second smallest planet in the solar system. 
+                        , Mars is also often described as the “Red Planet” due to its reddish appearance
+                        . and it could be our next home.
+                  </p>
+                </div>
+            </div>
+
+        <div class="jupiter_container" id="jupiter">
+                <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                    <h2>6. Jupiter</h2>
+                 </div>
+                <div class="img_container">
+                        <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+                </div>
+                <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+                    <p>The planet Jupiter is the fifth planet out from the Sun, and is two and a half times more massive
+                            than all the other planets in the solar system combined.
+                             It is made primarily of gases and is therefore known as a “gas giant” 
+                           
+                    </p>
+                </div>
+        </div> 
+        
+        
+        <div class="saturn_container" id="saturn">
+                <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                    <h2>7. Saturn</h2>
+                 </div>
+                <div class="img_container">
+                        <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+                </div>
+                <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+                    <p>This is the jewel in the solar system's crown , 
+                        its beauty is beyond belief , although saturn is a gas giant 
+                        but yet it is so light that it can float on water.
+                    </p>
+                </div>
+        </div>
+        
+        <div class="uranus_container" id="uranus">
+                <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                    <h2>8. Uranus</h2>
+                 </div>
+                <div class="img_container">
+                        <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+                </div>
+                <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+                    <p>Uranus is the seventh planet from the Sun. While being visible to the naked eye, 
+                            it was not recognised as a planet due to its dimness and slow orbit. it is also a gas giant,
+                            and guess what it rains diamond inside it!
+                    </p>
+                </div>
+        </div>
+
+        <div class="nep_container" id="neptune">
+                <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                    <h2>9. Neptune</h2>
+                 </div>
+                <div class="img_container">
+                        <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+                </div>
+                <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+                    <p>Neptune is the eighth planet from the Sun making it the most distant in the solar system.
+                            
+                            it is a giant ball of methane gas and it was discovered by pure mathematics and calculations (thanks to orbital mehanics).
+                             <a href="https://earthsky.org/human-world/today-in-science-discovery-of-neptune" id="sky" target="_blank">
+                           Learn more about its discovery here</a>
+                    </p>
+                </div>
+        </div>
+
+        <div class="pluto_container" id="pluto">
+                <div class="title" data-aos="fade-right" data-aos-duration="2000">
+                    <h2>10. Pluto</h2>
+                 </div>
+                <div class="img_container">
+                        <div class="img" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-up" data-aos-duration="2000"></div>
+                        <div class="img" data-aos="fade-left" data-aos-duration="2000"></div>
+                </div>
+                <div class="description1" data-aos="fade-down" data-aos-duration="2000">
+                    <p>Well I know Pluto is not considered as a planet , 
+                        but how can you ignore this little boy ,
+                        Pluto was first seen by use of a telescope in 1930.  
+                        Like Uranus and Neptune, Pluto can not be seen by the 
+                        naked eye and its existence was not known to the ancient world.
+                    </p>
+                </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          
+     <script>
+        AOS.init();
+     </script>
+
+
+    </body>
+</html>
