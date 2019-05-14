@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 
         <style>
         
@@ -20,7 +22,8 @@
                            url("images/nasa-53884-unsplash.jpg") no-repeat;
                background-size: cover;
                background-position: center;
-               background-attachment: fixed;           
+               background-attachment: fixed;   
+               width: 100vw;        
            }
 
            .sun_container {
@@ -762,7 +765,7 @@
            }
 
            /* ------ media queries --------*/
-           @media screen and (max-width:970px) {
+           @media only screen and (max-width:970px) {
                .sun_container .img_container .img:nth-child(2) {
                    width: 0;
                    display: none;
@@ -902,7 +905,7 @@
                }
            }
 
-           @media screen and (max-width:750px) {
+           @media  only screen and (max-width:750px) {
                .sun_container .img_container .img:nth-child(3) {
                    display: none;
                    width: 0;
