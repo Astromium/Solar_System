@@ -7,15 +7,22 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
-        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
+
+           :root {
+           --dark: rgba(0,0,0,0.7);
+           --light: #fff;
+           --primary: #2980b9;
+           --shadow: 0 1px 5px rgba(104,104,104,0.8);
+        }
         
            body {
                margin: 0;
                padding: 0;
                background: linear-gradient(125deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
-                  , url("images/ethan-cull-764216-unsplash.jpg") no-repeat;
+                  , url("images/nasa-53884-unsplash.jpg") no-repeat;
                background-position: center;
                background-size: cover;
                background-attachment: fixed;
@@ -139,46 +146,44 @@
                background: rgba(0, 184, 148,1.0);
            }
 
-           .footer {
-               margin-top: 30px;
-               width: 100%;
-               height: 20vh;
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               background: rgba(0,0,0,0.8);
-               align-items: center;
-           }
+           footer {
+           background: var(--dark);
+           box-shadow: var(--shadow);
+           text-align: center;
+           color: var(--light);
+           display: flex;
+           flex-direction: column;
+          
+       }
 
-           .footer .social {
-               width: 80%;
-               height: 50%;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-           }
+       footer ul {
+           display: grid;
+           padding: 0;
+           grid-gap: 5px;
+           grid-template-columns: repeat(4, 1fr);
+           list-style: none;
+       }
 
-           .footer .social a {
-               
-               text-decoration: none;
-               padding: 10px 10px;
-               
-           }
+       
 
-           .footer .social a img {
-               
-               border-radius: 5px;
-           }
+       footer ul a {
+           text-decoration: none;
+           color: var(--light);
+           text-align: center;
+          
+       }
 
-           
+       footer a {
+           transition: 0.5s linear;
+       }
 
-           .footer p {
-               justify-content: center;
-               align-items: center;
-               color: #fff;
-               font-size: 1.2rem;
-               font-family: /*'Stylish', sans-serif;*/ inherit;
-           }
+       footer a:hover {
+           color: #0097e6;
+       }
+
+       footer p{
+           font-size: 1.2rem;
+       }
 
            /*------ media queries ----- */
 
@@ -222,25 +227,27 @@
 
         <div class="last_section">
             <p class="ayn" data-aos="zoom-out" data-aos-duration="2000">So are you in ?</p>
-            <a href="main.html" class="get_started animated pulse" data-aos="fade-down" data-aos-duration="2500">Get Started</a>
+            <a href="main2.html" class="get_started animated pulse" data-aos="fade-down" data-aos-duration="2500">Get Started</a>
         </div>
 
 
-        <div class="footer">
-           <div class="social" data-aos="fade-right" data-aos-duration="2000">
-                <a href="mailto:ayoubbelouadah7@gmail.com" target="blank"><img src="images/gmail.png" width="30px" height="30px"></a>
-                <a href="https://www.facebook.com/Son.Ayoub.Messi" target="blank"><img src="images/facebook.png" width="30px" height="30px"></a>
-                <a href="https://www.instagram.com/ayoub_belouadah/" target="blank"><img src="images/instagram.png" width="30px" height="30px"></a>
-                <a href="https://github.com/Astromium?fbclid=IwAR1hwV39Ivsl3qANYgroD_P9jx1PwtC6-BQWCuNiIvGSeuNkjsIee603IQQ
-                " target="blank"><img src="images/github.png" width="30px" height="30px"></a>
-           </div>
-           <p class="credits" >Designed by : Astromium</p>
-       </div>
+        <footer>
+                <ul>
+                    <li><a href="https://www.facebook.com/Son.Ayoub.Messi" target="blank""><i class="fab fa-facebook fa-2x"></i></a></li>
+                    <li><a href="https://www.instagram.com/ayoub_belouadah/" target="blank""><i class="fab fa-instagram fa-2x"></i></a>
+                    <li><a href="https://github.com/Astromium?fbclid=IwAR1hwV39Ivsl3qANYgroD_P9jx1PwtC6-BQWCuNiIvGSeuNkjsIee603IQQ
+                        " target="blank""><i class="fab fa-github fa-2x"></i></a>
+                    <li><a href="mailto:ayoubbelouadah7@gmail.com" target="blank""><i class="far fa-envelope fa-2x"></i></a>
+                </ul>
+                <p>Astromium &copy; 2019</p>
+        </footer>
 
 
 
      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
+
           
      <script>
         AOS.init();

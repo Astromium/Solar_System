@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>SpaceGuide | Main</title>
+
+    <style>
+    
+       :root {
+           --dark: rgba(0,0,0,0.7);
+           --light: #fff;
+           --primary: #2980b9;
+           --shadow: 0 1px 5px rgba(104,104,104,0.8);
+       }
+
+       html {
+           box-sizing: border-box;
+       }
+
+       body {
+           
+           font-family: 'Raleway', sans-serif;
+           margin: 20px;
+           line-height: 1.5;
+           background: linear-gradient(125deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("images/nasa-53884-unsplash.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;  
+       }
+
+       img {
+           max-width: 100%;
+       }
+
+       .wrapper {
+           display: grid;
+           grid-gap: 20px;
+       }
+
+       .main-nav ul {
+           display: grid;
+           grid-gap: 15px;
+           grid-template-columns: repeat(4, 1fr);
+           list-style: none;
+           padding: 0;
+       }
+
+       .main-nav a {
+           text-decoration: none;
+           color: var(--light);
+           padding: 2rem;
+           font-size: 1.3rem;
+           background: var(--dark);
+           box-shadow: var(--shadow);
+           display: block;
+           text-align: center;
+           transition: 0.5s linear;
+       }
+
+       .main-nav a:hover {
+           color: #000;
+           background: var(--light);
+       }
+
+       .top-container {
+           display: grid;
+           grid-gap: 10px;
+           grid-template-areas: 
+                 'showcase showcase info'
+                 'showcase showcase learn';
+           background: var(--dark);
+           color: var(--light);
+           box-shadow: var(--shadow);
+           padding: 1.1rem 1.1rem;
+       }
+
+       .info {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           grid-area: info;
+       }
+
+       .top-container img {
+           grid-area: showcase;
+       }
+
+       .top-container .learn {
+           grid-area: learn;
+       }
+
+       .learn {
+           display: flex;
+           justify-content: center;
+           align-items: center
+       }
+
+       .learn .btn {
+           text-decoration: none;
+           color: var(--light);
+           padding: 1rem 2rem;
+           border: 0;
+           background: var(--dark);
+           box-shadow: var(--shadow);
+           transition: 0.5s ease;
+       }
+
+       .learn .btn:hover {
+           color: #000;
+           background: #fff;
+       }
+
+       
+
+       .top-container .info-title {
+           font-size: 2.5rem;
+           
+           margin: 0;
+       }
+
+       .top-container .info-content {
+           font-size: 1.3rem;
+           margin: 0;
+           /*padding: 0 1.9rem;*/
+       }
+
+       .mid-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 200px;
+            padding: 1rem 2rem;
+            background: var(--dark);
+            box-shadow: var(--shadow);
+            color: var(--light);
+       }
+
+       .boxes {
+           display: grid;
+           grid-gap: 20px;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           text-align: center;
+       }
+
+       .box {
+           padding: 1rem 2rem;
+           background: var(--dark);
+           color: var(--light);
+           box-shadow: var(--shadow);
+       }
+
+       footer {
+           background: var(--dark);
+           box-shadow: var(--shadow);
+           text-align: center;
+           color: var(--light);
+           display: flex;
+           flex-direction: column;
+          
+       }
+
+       footer ul {
+           display: grid;
+           padding: 0;
+           grid-gap: 5px;
+           grid-template-columns: repeat(4, 1fr);
+           list-style: none;
+       }
+
+       
+
+       footer ul a {
+           text-decoration: none;
+           color: var(--light);
+           text-align: center;
+          
+       }
+
+       .boxes a {
+           text-decoration: none;
+           transition: 0.5s linear;
+       }
+
+       .boxes a:hover {
+           background: var(--light);
+           color: var(--dark);
+       }
+
+       footer a {
+           transition: 0.5s linear;
+       }
+
+       footer a:hover {
+           color: #0097e6;
+       }
+
+       footer p{
+           font-size: 1.2rem;
+       }
+
+       
+
+       /* MEDIA QUERIES */
+
+       @media(max-width: 740px) {
+           .top-container {
+               grid-template-areas: 
+                   'showcase'
+                   'info'
+                   'learn';
+           }
+
+           .top-container .info-title {
+           font-size: 1.9rem;
+           
+           
+           }
+           .learn .btn {
+               width: 100%;
+               text-align: center;
+           }
+       }
+
+       @media(max-width: 700px) {
+           .main-nav ul {
+               grid-template-columns: 1fr;
+               
+           }
+       }
+
+       
+
+       
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+         
+        <header class="main-nav">
+            <ul class="menu-list">
+                <li><a href="#">Main</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="top-container">
+            <img src="images/170511_EpsEri_Full.jpg" alt="">
+            <div class="info">
+                <h2 class="info-title">So What is a Solar System ?</h2>
+                <p class="info-content">Well a Solar System is the collection of eight planets and 
+                    their moons in orbit round the sun, together with
+                        smaller bodies in the form of asteroids, meteoroids, and comets.</p>
+                       
+            </div>
+            <div class="learn">
+            <a class="btn" href="#">Learn More</a>
+        </div>  
+        </div>
+
+        <section class="mid-container">
+            <h2 class="mid-title">Jump off Right Where You Wanna go!</h2>
+        </section>
+
+        <section class="boxes">
+            <a href="content2.html#sun"><div class="box">
+                    <img src="images/sun.svg" alt="" height="64px" width="64px">
+                <h3 class="title">The Sun</h3>
+            </div></a>
+
+            <a href="content2.html#mer"><div class="box">
+                    <img src="images/mercury.svg" alt="" height="64px" width="64px">
+                <h3 class="title">Mercury</h3>
+            </div></a>
+
+            <a href="content2.html#ven"><div class="box">
+                <img src="images/venus.svg" alt="" height="64px" width="64px">
+                <h3 class="title">Venus</h3>
+            </div></a>
+
+            <a href="content2.html#earth"><div class="box">
+                    <img src="images/earth-globe.svg" alt="" height="64px" width="64px">
+                <h3 class="title">Earth</h3>
+            </div></a>
+            <a href="content2.html#mars"><div class="box">
+                <img src="images/mars (1).svg" alt="" height="64px" width="64px">
+                <h3 class="title">Mars</h3>
+            </div></a>
+                
+            <a href="content2.html#jupiter"><div class="box">
+                    <img src="images/jupiter.svg" alt="" height="64px" width="64px">
+                    <h3 class="title">Jupiter</h3>
+            </div></a>
+    
+            <a href="content2.html#saturn"><div class="box">
+                    <img src="images/astronomy.svg" alt="" height="64px" width="64px">
+                    <h3 class="title">Saturn</h3>
+            </div></a>
+    
+            <a href="content2.html#uranus"><div class="box">
+                    <img src="images/uranus.svg" alt="" height="64px" width="64px">
+                    <h3 class="title">Uranus</h3>
+            </div></a>
+
+            <a href="content2.html#neptune"><div class="box">
+                    <img src="images/neptune.svg" alt="" height="64px" width="64px">
+                    <h3 class="title">Neptune</h3>
+            </div></a>
+
+            <a href="content2.html#pluto"><div class="box">
+                    <img src="images/pluto.svg" alt="" height="64px" width="64px">
+                    <h3 class="title">Pluto</h3>
+            </div></a>
+        </section>
+
+        <footer>
+            <ul>
+                    
+                <li><a href="https://www.facebook.com/Son.Ayoub.Messi" target="blank""><i class="fab fa-facebook fa-2x"></i></a></li>
+                <li><a href="https://www.instagram.com/ayoub_belouadah/" target="blank""><i class="fab fa-instagram fa-2x"></i></a>
+                <li><a href="https://github.com/Astromium?fbclid=IwAR1hwV39Ivsl3qANYgroD_P9jx1PwtC6-BQWCuNiIvGSeuNkjsIee603IQQ
+                    " target="blank""><i class="fab fa-github fa-2x"></i></a>
+                <li><a href="mailto:ayoubbelouadah7@gmail.com" target="blank""><i class="far fa-envelope fa-2x"></i></a>
+                        
+            </ul>
+            <p>Astromium &copy; 2019</p>
+        </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
+
+    
+
+</body>
+</html>
