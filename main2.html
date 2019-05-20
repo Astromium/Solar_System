@@ -204,6 +204,17 @@
            font-size: 1.2rem;
        }
 
+       .active {
+           display: grid;
+           grid-template-columns: 1fr;
+           grid-gap: 10px;
+       }
+
+       .icon {
+           color: #fff;
+           display: none;
+       }
+
        
 
        /* MEDIA QUERIES */
@@ -230,7 +241,12 @@
        @media(max-width: 700px) {
            .main-nav ul {
                grid-template-columns: 1fr;
+               display: none;
                
+           }
+
+           .icon {
+               display: block;
            }
        }
 
@@ -247,9 +263,13 @@
     
     <div class="wrapper">
 
+        <div class="icon">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+
          
         <header class="main-nav">
-            <ul class="menu-list">
+            <ul class="menu-list" id="menu">
                 <li><a href="#">Main</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Store</a></li>
@@ -349,6 +369,24 @@
 
 
     <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <script>
+  
+    $(function() {
+        $('.icon').on('click', function() {
+            
+            $('#menu').toggle();
+
+        });
+    });
+  
+  
+  </script>
 
     
 
